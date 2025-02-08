@@ -7,7 +7,7 @@
       <select v-model="selectedPlatId">
         <option disabled value="">Sélectionnez un plat</option>
         <option v-for="plat in platStore.plats" :key="plat.id" :value="plat.id">
-          {{ plat.nom }}
+          {{ plat.nomPlat }}
         </option>
       </select>
   
@@ -18,7 +18,7 @@
       <select v-model="selectedIngredientId">
         <option disabled value="">Sélectionnez un ingrédient</option>
         <option v-for="ingredient in ingredientStore.ingredients" :key="ingredient.id" :value="ingredient.id">
-          {{ ingredient.nom }}
+          {{ ingredient.nomIngredient }}
         </option>
       </select>
   
@@ -56,6 +56,8 @@
   
       const platStore = usePlatStore();
       const ingredientStore = useIngredientStore();
+      ingredientStore.allIngredient()
+      platStore.allPlat()
       const recipeStore = useRecipeStore();
   
       const selectedPlatId = ref("");

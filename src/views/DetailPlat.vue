@@ -1,14 +1,13 @@
 <!-- src/views/DetailPlat.vue -->
 <template>
     <div>
-      <h2>Détails du Plat : {{ plat.nom }}</h2>
+      <h2>Détails du Plat : {{ plat.nomPlat }}</h2>
       <p><strong>Temps de cuisson :</strong> {{ plat.tempsCuisson }}</p>
-      <p><strong>Quantité :</strong> {{ plat.quantite }}</p>
   
       <h3>Ingrédients</h3>
       <ul>
-        <li v-for="(ingredient, index) in plat.ingredients" :key="index">
-          {{ ingredient }}
+        <li v-for="(ingredient, index) in plat.recettes" :key="index">
+          {{ ingredient.idIngredient.nomIngredient }}
         </li>
       </ul>
   

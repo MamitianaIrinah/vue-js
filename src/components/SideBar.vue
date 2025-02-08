@@ -1,4 +1,5 @@
 <!-- src/components/Sidebar.vue -->
+
 <template>
     <div class="sidebar">
       <ul class="navbar-nav">
@@ -6,7 +7,7 @@
           <router-link to="/insertion-plat">Insertion Plat</router-link>
         </li>
         <li class="nav-item">
-          <router-link to="/insertion-ingredient">Insertion Ingrédient</router-link>
+          <router-link to="/liste-ingredients">Liste Ingrédient</router-link>
         </li>
         <li class="nav-item">
           <router-link to="/liste-plats">Liste des Plats</router-link>
@@ -17,12 +18,18 @@
         <li>
   <router-link to="/insertion-recette">Insertion Recette</router-link>
 </li>
+<li>
+  <router-link to="/insertion-stock">Insertion Stock</router-link>
+</li>
+
 
       </ul>
     </div>
   </template>
   
   <script>
+
+
   export default {
     name: "Sidebar",
   };

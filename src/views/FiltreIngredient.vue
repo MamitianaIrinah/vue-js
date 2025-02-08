@@ -9,7 +9,7 @@
           :key="ingredient.id"
           :value="ingredient.id"
         >
-          {{ ingredient.nom }}
+          {{ ingredient.nomIngredient }}
         </option>
       </select>
       <br><br>
@@ -27,6 +27,7 @@
     name: "FiltreIngredient",
     setup() {
       const ingredientStore = useIngredientStore()
+      ingredientStore.allIngredient()
       const router = useRouter()
       const selectedIngredientId = ref("")
   

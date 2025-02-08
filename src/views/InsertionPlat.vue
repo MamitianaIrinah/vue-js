@@ -4,16 +4,16 @@
       <h2>Insertion de Plat</h2>
       <form @submit.prevent="submitPlat">
         <div>
-          <label for="nom">Nom :</label>
-          <input type="text" id="nom" v-model="plat.nom" required>
+          <label for="nomPlat">Nom :</label>
+          <input type="text" id="nomPlat" v-model="plat.nomPlat" required>
         </div>
         <div>
           <label for="tempsCuisson">Temps de cuisson :</label>
-          <input type="text" id="tempsCuisson" v-model="plat.tempsCuisson" required>
+          <input type="number" id="tempsCuisson" v-model="plat.tempsCuisson" required>
         </div>
         <div>
-          <label for="quantite">Quantité :</label>
-          <input type="number" id="quantite" v-model.number="plat.quantite" required>
+          <label for="prixUnitaire">prix Unitaire :</label>
+          <input type="number" id="prixUnitaire" v-model.number="plat.prixUnitaire" required>
         </div>
         <button type="submit">Enregistrer</button>
       </form>
@@ -30,17 +30,18 @@
     name: "InsertionPlat",
     setup() {
       const platStore = usePlatStore()
+      platStore.addPlat()
       const plat = ref({
-        nom: "",
+        nomPlat: "",
         tempsCuisson: "",
-        quantite: null,
+        prixUnitaire: null,
       })
       
       const submitPlat = () => {
         // Ajoute le plat dans le store (la propriété ingredients sera ajoutée automatiquement)
         platStore.addPlat({ ...plat.value })
         // Réinitialise le formulaire
-        plat.value = { nom: "", tempsCuisson: "", quantite: null }
+        plat.value = { nomPlat: "", tempsCuisson: "", prixUnitaire: null }
       }
   
       return { plat, submitPlat }

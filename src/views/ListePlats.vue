@@ -6,7 +6,7 @@
         <!-- Pour chaque plat, on crée un lien vers la page de détail -->
         <li v-for="(plat, index) in platStore.plats" :key="index">
           <router-link :to="{ name: 'DetailPlat', params: { id: index } }">
-            {{ plat.nom }} - {{ plat.tempsCuisson }} - {{ plat.quantite }}
+            {{ plat.nomPlat }} - {{ plat.tempsCuisson }} - {{ plat.prixUnitaire }}
           </router-link>
         </li>
       </ul>
@@ -17,13 +17,14 @@
   
   <script>
   import { usePlatStore } from '../stores/platStore'
-  
+
   export default {
     name: "ListePlats",
     setup() {
       const platStore = usePlatStore()
+      platStore.allPlat()
       return { platStore }
-    }
+    } 
   }
   </script>
   
