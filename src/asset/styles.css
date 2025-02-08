@@ -1,0 +1,165 @@
+/* 🎨 Styles Globaux */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f8f9fa, #e3e7eb);
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* 📌 Conteneur principal */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+}
+
+/* 🏠 Sidebar */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background: linear-gradient(135deg, #003366, #002244); /* Bleu roi */
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    color: white;
+    box-shadow: 4px 0px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sidebar h2 {
+    font-size: 26px; /* Taille du texte plus grande */
+    margin-bottom: 20px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin: 15px 0;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px; /* Taille du texte plus grande */
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.sidebar a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateX(5px);
+}
+
+/* 📝 Formulaires */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 500px; /* Limiter la largeur du formulaire */
+    margin: 20px auto;
+}
+
+label {
+    font-weight: bold;
+    font-size: 18px; /* Taille du texte plus grande */
+}
+
+input, select {
+    padding: 15px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 16px; /* Taille du texte dans les champs */
+    transition: border-color 0.3s;
+}
+
+input:focus, select:focus {
+    border-color: #4169E1; /* Bleu roi */
+    outline: none;
+}
+
+button {
+    padding: 15px;
+    background: linear-gradient(135deg, #003366, #002244); /* Bleu foncé */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px; /* Taille du texte du bouton */
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background: #001933; /* Bleu encore plus foncé */
+    transform: scale(1.05);
+}
+
+/* 📜 Liste des éléments */
+.liste {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 800px; /* Limiter la largeur de la liste */
+    margin: 20px auto;
+}
+
+.liste ul {
+    list-style: none;
+    padding: 0;
+}
+
+.liste li {
+    background: #e9ecef;
+    padding: 15px;
+    margin: 6px 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px; /* Taille du texte dans les éléments */
+    transition: transform 0.2s;
+}
+
+.liste li:hover {
+    transform: scale(1.03);
+    background: #d6d8db;
+}
+
+/* 🛠️ Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        max-width: 90%;
+        padding: 15px;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .sidebar a {
+        display: inline-block;
+        margin: 5px;
+    }
+}
