@@ -9,6 +9,12 @@ export const getAllStock = () => {
     })});
 }
 
+export const getByIngredient = (id) => {
+    return new Promise((resolve, reject) => {axios.get(ip + "/api/v1/Stocks/" + id).then((data) => {
+        resolve(data.data)
+    })});
+}
+
 export const insertionStock = (IngredientById, quantiteEntree, quantiteSortie) => {
     return new Promise((resolve, reject) => {axios.post(ip + "/api/v1/Stocks", {
         IngredientById: IngredientById,
@@ -19,4 +25,6 @@ export const insertionStock = (IngredientById, quantiteEntree, quantiteSortie) =
     }).then((data) => {
         resolve(data.data)
     })});
+
+    
 }

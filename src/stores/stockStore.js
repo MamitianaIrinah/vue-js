@@ -19,7 +19,14 @@ export const useStockStore = defineStore("stockStore", {
       console.log(data)
       const response = await insertionStock(data.IngredientById, data.quantiteEntree, data.quantiteSortie)
       this.stocks = response
-    }
+    },
+
+    async allStockByIngredient(id) {
+      const response = await getByIngredient(id);
+      console.log("Réponse API stocks :", response);
+      this.stocks = response;
+    
+  }
 
   }
 });

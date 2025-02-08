@@ -36,6 +36,7 @@ const routes = [
     component: () => import('../views/DetailIngredient.vue')
   },
   
+  
   {
     path: '/liste-ingredients',
     name: 'ListeIngredients',

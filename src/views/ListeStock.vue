@@ -3,7 +3,7 @@
       <h2>Liste des stocks</h2>
       <ul>
         <li v-for="stock in stockStore.stocks" :key="stock.id">
-            {{ ingredient.idIngredient.nomIngredient }} - {{ stock.quantiteEntree }} - {{ stock.quantiteSortie }} 
+       {{ stock.quantiteEntree }} - {{ stock.quantiteSortie }} 
         </li>
       </ul>
       <br>
@@ -16,14 +16,13 @@
   <script>
   import { useStockStore } from '../stores/stockStore'
   
-  
   export default {
-    name: "ListeStock",
+    name: "DetailIngredient",
     setup() {
       const stockStore = useStockStore()
-      stockStore.allStock()
+      stockStore.allStockByIngredient();
+       // Charge tous les plats
       return { stockStore }
-    }
+    } 
   }
   </script>
-  
