@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const ip = "http://192.168.88.24:8000"
+const ip = "https://jeu-production-2a49.up.railway.app"
 
 
 export const getAllPlat = () => {
