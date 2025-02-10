@@ -65,6 +65,7 @@
           return;
         }
         // Affecte l'ingrédient sélectionné à l'objet stock
+        console.log(selectedIngredientId.value)
         stock.value.IngredientById = selectedIngredientId.value;
         // Appelle la méthode d'ajout dans le store en passant une copie de l'objet stock
         stockStore.addStock({ ...stock.value });
